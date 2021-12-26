@@ -103,4 +103,11 @@ public class PaymentController extends BaseController {
 	public void emptyCart(){
         Cart.getCart().emptyCart();
     }
+
+	// Nguyen Van Dao 20193879
+	public void processPayOrder(int amount, String contents, String cardNumber, String cardHolderName,
+							String expirationDate, String securityCode) {
+		// TODO: handle logic payOrder
+		payOrder(amount, contents, cardNumber, cardHolderName, expirationDate, securityCode);
+	}
 }

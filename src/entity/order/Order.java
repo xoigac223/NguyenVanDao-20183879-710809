@@ -3,6 +3,7 @@ package entity.order;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Random;
 
 import utils.Configs;
 
@@ -61,4 +62,10 @@ public class Order {
         return (int) (amount + (Configs.PERCENT_VAT/100)*amount);
     }
 
+    // Nguyễn Văn Đạo - 20183879
+    public int calculateShippingFee(){
+        Random rand = new Random();
+        int fees = (int)( ( (rand.nextFloat()*10)/100 ) * this.getAmount() );
+        return fees;
+    }
 }
